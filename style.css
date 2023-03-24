@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1.2rem;
+  border-bottom: 1px solid rgb(221, 214, 214);
+  box-shadow: 1px 2px 10px 3px rgb(207, 200, 200);
+}
+.logo {
+  display: flex;
+  cursor: pointer;
+}
+.logo img {
+  scale: 70%;
+}
+.logo h2 {
+  color: rgb(80, 80, 80);
+}
+#search-btn {
+  height: 2.5rem;
+  width: 20rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(214, 207, 207);
+}
+#search-btn:focus {
+  outline: 2px solid rgb(112, 255, 112);
+}
+#container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem;
+}
+#newNote {
+  padding: 0.5rem;
+  width: 40rem;
+  border: 1px solid rgb(221, 212, 212);
+  transition: 0.5s ease;
+  border-radius: 0.5rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#takeNote {
+  border: none;
+  border-radius: 0.5rem;
+  width: 40rem;
+  border: 1px solid rgb(219, 212, 212);
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 10px 2px rgb(207, 200, 200);
+  transition: 0.4s ease;
+  transition: 0.5s ease;
+}
+.overlay {
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+#title {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.description,
+.note-title {
+  height: 2rem;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: x-large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: 0.5s ease;
+}
+.expanded {
+  transition: 0.5s ease;
+  height: 10rem;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    scale: 80%;
+    margin-left: -1.5rem;
+  }
+}
