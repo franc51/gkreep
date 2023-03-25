@@ -1,7 +1,7 @@
 class Note {
   constructor() {
-    this.title = null;
-    this.description = null;
+    this.title = title;
+    this.description = description;
   }
   setTitle(title) {
     this.title = title;
@@ -16,61 +16,43 @@ class Note {
     return this.description;
   }
 }
-const description = document.getElementById("description");
-let notes = [];
-const noteTitle = document.createElement("input");
-noteTitle.type = "text";
-noteTitle.className = "note-title";
-noteTitle.setAttribute("placeholder", "Title");
-const takeNote = document.getElementById("newNote");
-const hideNote = document.getElementById("overlay");
-const container = document.getElementById("note-list-container");
-let clicked = false;
-function showNewNote() {
-  if (clicked) {
-    return;
-  } else {
-    clicked = true;
 
-    let newNote = new Note();
-    notes.push(newNote);
-    takeNote.prepend(noteTitle);
-    description.classList.add("expand");
-  }
-}
-noteTitle.addEventListener("keyup", (e) => {
-  if (e.target.value != null && e.target.value != "") {
-    notes[notes.length - 1].setTitle(e.target.value);
-  }
-});
-description.addEventListener("keyup", (e) => {
-  notes[notes.length - 1].setDescription(e.target.value);
-});
-// trebuie sa cream un obiect atunci cand dam click pe notita,
-// apoi il adaugam direct in array, apoi folosim obiectul din,
-// array si ii modificam titlul si descrierea din null in ce avem nevoie
+var notes = [];
+const saveNote = document.getElementById("save-button");
 
-takeNote.addEventListener("click", showNewNote);
+function addNote() {
+  const newDivCardNote = document.createElement("div");
+  const newTitleCard = document.createElement("textarea");
+  const newDescriptionCard = document.createElement("textarea");
 
-function hideNewNote() {
-  clicked = false;
-  takeNote.removeChild(noteTitle);
-  description.classList.remove("expand");
-  description.value = "";
-  noteTitle.value = "";
-  console.log(notes);
-  //   showNotes();
+  newTitleCard.innerHTML = this.getTitle();
+  newDescriptionCard.innerHTML = this.getDescription();
+
+  newDivCardNote.appendChild(newTitleCard);
+  newDivCardNote.appendChild(newDescriptionCard);
+
+  document.body.appendChild(newDivCardNote);
+
+  newTitleCard.addEventListener("keyup", () =>
+    this.setTitle(newTitleCard.value)
+  );
+  newDescriptionCard.addEventListener("keyup", () =>
+    this.setDescription(newDescriptionCard.value)
+  );
 }
 
-hideNote.addEventListener("click", hideNewNote);
+saveNote.addEventListener("click", () => {
+  const titleNote = document.getElementById("title");
+  const descriptionNote = document.getElementById("description");
 
-// function showNotes() {
-//   notes.forEach((note) => {
-//     const notediv = document.createElement("div");
-//     noteTitle.value = note.title;
-//     description.value = note.description;
-//     notediv.appendChild(noteTitle);
-//     notediv.appendChild(description);
-//     container.appendChild(notediv);
-//   });
-// }
+  const newNote = new Note(titleNote.value, descriptionNote.value);
+  notes.push(newNote);
+
+  if (titleNote) {
+    titleNote.value = "";
+  }
+  if (descriptionNote) {
+    descriptionNote.value = "";
+  }
+  console.log(newNote);
+});

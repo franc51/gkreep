@@ -19,13 +19,38 @@
     <div id="container">
       <div id="newNote">
         <textarea
+          id="title"
+          class="description title"
+          placeholder="Title"
+        ></textarea>
+        <textarea
           id="description"
           class="description"
-          placeholder="Add note.."
+          placeholder="Write description"
         ></textarea>
+        <div class="new-note-buttons">
+          <div class="edit-buttons">
+            <div>
+              <label for="">Upload image</label>
+              <input
+                type="file"
+                id="button"
+                accept="image/png, image/gif, image/jpeg"
+              />
+            </div>
+            <div>
+              <label for="">Choose color</label>
+              <input id="note-color-choose" type="color" />
+            </div>
+          </div>
+          <div class="save-button" id="save-button"><button>Save</button></div>
+        </div>
       </div>
     </div>
-    <div id="note-list-container"></div>
+    <div id="note-list-container" class="note-list-container">
+      <img src="images/nuaph.PNG" alt="" />
+    </div>
     <div id="overlay" class="overlay"></div>
+    <footer>Designed by Francisc</footer>
   </body>
 </html>
