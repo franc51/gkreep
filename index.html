@@ -9,6 +9,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- Short navigation -->
     <nav>
       <div class="logo">
         <img src="images/logo.png" alt="" />
@@ -16,7 +17,9 @@
       </div>
       <input id="search-btn" type="text" placeholder="Search notes" />
     </nav>
+    <!-- Main container -->
     <div id="container">
+      <!-- New note generator  -->
       <div id="newNote">
         <textarea
           id="title"
@@ -29,27 +32,63 @@
           placeholder="Write description"
         ></textarea>
         <div class="new-note-buttons">
-          <div class="edit-buttons">
-            <div>
-              <label for="">Upload image</label>
-              <input
-                type="file"
-                id="button"
-                accept="image/png, image/gif, image/jpeg"
-              />
-            </div>
-            <div>
-              <label for="">Choose color</label>
-              <input id="note-color-choose" type="color" />
-            </div>
+          <div class="upload-buttons">
+            <img id="up-btn" src="images/add.png" alt="" />
+            <img id="up-btn" src="images/bucket.png" alt="" />
           </div>
           <div class="save-button" id="save-button"><button>Save</button></div>
         </div>
       </div>
     </div>
+    <!-- The container where the notes come  -->
     <div id="note-list-container" class="note-list-container">
-      <img src="images/nuaph.PNG" alt="" />
+      <img id="main-background-img" src="images/nuaph.PNG" alt="" />
+      <div id="card" class="">
+        <div class="card-info">
+          <textarea
+            id="title"
+            class="description title"
+            placeholder="Title"
+          ></textarea>
+          <textarea
+            id="description"
+            class="description"
+            placeholder="Write description"
+          ></textarea>
+        </div>
+        <div class="new-note-buttons">
+          <div class="edit-buttons"></div>
+        </div>
+        <div class="upload-buttons">
+          <img id="up-btn" src="images/add.png" alt="" />
+          <img id="up-btn" src="images/bucket.png" alt="" />
+        </div>
+        <img id="delete-card" src="images/reject.png" alt="" />
+      </div>
+      <div id="card" class="">
+        <div class="card-info">
+          <textarea
+            id="title"
+            class="description title"
+            placeholder="Title"
+          ></textarea>
+          <textarea
+            id="description"
+            class="description"
+            placeholder="Write description"
+          ></textarea>
+        </div>
+        <div class="new-note-buttons">
+          <div class="edit-buttons"></div>
+        </div>
+        <div class="upload-buttons">
+          <img id="up-btn" src="images/add.png" alt="" />
+          <img id="up-btn" src="images/bucket.png" alt="" />
+        </div>
+        <img id="delete-card" src="images/reject.png" alt="" />
+      </div>
     </div>
+    <!-- Overlay used to dimm the display  -->
     <div id="overlay" class="overlay"></div>
     <footer>Designed by Francisc</footer>
   </body>

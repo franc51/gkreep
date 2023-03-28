@@ -1,58 +1,10 @@
-class Note {
-  constructor() {
-    this.title = title;
-    this.description = description;
-  }
-  setTitle(title) {
-    this.title = title;
-  }
-  setDescription(description) {
-    this.description = description;
-  }
-  getTitle() {
-    return this.title;
-  }
-  getDescription() {
-    return this.description;
+function deleteCard() {
+  let deleted = document.getElementById("card");
+  for (let i = 0; i < deleted.length; i++) {
+    deleted[i].classList.add("remove");
+    console.log(deleted);
   }
 }
 
-var notes = [];
-const saveNote = document.getElementById("save-button");
-
-function addNote() {
-  const newDivCardNote = document.createElement("div");
-  const newTitleCard = document.createElement("textarea");
-  const newDescriptionCard = document.createElement("textarea");
-
-  newTitleCard.innerHTML = this.getTitle();
-  newDescriptionCard.innerHTML = this.getDescription();
-
-  newDivCardNote.appendChild(newTitleCard);
-  newDivCardNote.appendChild(newDescriptionCard);
-
-  document.body.appendChild(newDivCardNote);
-
-  newTitleCard.addEventListener("keyup", () =>
-    this.setTitle(newTitleCard.value)
-  );
-  newDescriptionCard.addEventListener("keyup", () =>
-    this.setDescription(newDescriptionCard.value)
-  );
-}
-
-saveNote.addEventListener("click", () => {
-  const titleNote = document.getElementById("title");
-  const descriptionNote = document.getElementById("description");
-
-  const newNote = new Note(titleNote.value, descriptionNote.value);
-  notes.push(newNote);
-
-  if (titleNote) {
-    titleNote.value = "";
-  }
-  if (descriptionNote) {
-    descriptionNote.value = "";
-  }
-  console.log(newNote);
-});
+let removeCard = document.getElementById("delete-card");
+removeCard.addEventListener("click", deleteCard);
