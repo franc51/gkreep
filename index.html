@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Francisc</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -17,31 +21,117 @@
       </div>
       <input id="search-btn" type="text" placeholder="Search notes" />
     </nav>
-    <!-- Main container -->
-    <div id="container">
-      <!-- New note generator  -->
-      <div id="newNote">
-        <input type="text"
-          id="description"
-          class="description"
-          placeholder="Write description"
-        ></inpout>
-        <div class="new-note-buttons">
-          <div class="upload-buttons">
-            <img id="up-btn" src="images/add.png" alt="" />
-            <img id="up-btn" src="images/bucket.png" alt="" />
-          </div>
-          <div class="save-button" id="save-button"><button>Save</button></div>
+    <div class="container">
+      <div class="popup-box">
+        <div class="title">
+          <h3>Add a new note</h3>
+          <img class="exit-popup" src="images/reject.png" alt="">
+        </div>
+        <div class="input-div">
+          <label for="">Title</label>
+          <input type="text" placeholder="">
+          <label for="">Description</label>
+          <input type="textarea" placeholder="">
+        </div>
+        <div class="add-note-btn"><button class="add">Add note</button></div>
+      </div>
+      <div class="note">
+        <div class="add-logo">
+          <button class="add-btn">Add new note</button>
         </div>
       </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="info"><h2>Fa temele</h2>
+          <p>la matematica, la romana, la geografie, la informatica, la biologie, la algebra, la geometrie, la filozofie</p></div>
+       
+        <div class="break"></div>
+        <div class="date-and-delete">
+          <div class="date-div">4 April 2023</div>
+          <div class="delete-div"><button class="del-btn">Delete</button></div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      </div>
     </div>
-    <!-- The container where the notes come  -->
-    <div id="note-list-container" class="note-list-container">
-      <img id="main-background-img" src="images/nuaph.PNG" alt="" />
-      
-    </div>
-    <!-- Overlay used to dimm the display  -->
-    <div id="overlay" class="overlay"></div>
-    <footer>Designed by Francisc</footer>
+    
   </body>
 </html>
