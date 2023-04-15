@@ -64,27 +64,36 @@ nav {
 .note {
   text-align: center;
   margin: 1rem;
-  padding: 1rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 15rem;
-  width: 15rem;
   background-color: rgb(243, 255, 137);
   box-shadow: 2px 2px 10px 5px rgb(196, 189, 189);
   transition: all 0.5s ease;
 }
+.remove-btn {
+  cursor: pointer;
+}
+
 .info {
   background-color: rgb(243, 255, 137);
-  height: 11rem;
+  max-width: 15rem;
+}
+.delete-div {
+  width: 100%;
+  text-align: right;
 }
 .date-and-delete {
-  width: 12rem;
+  margin-bottom: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.delete-note {
+  display: none;
 }
 .add-btn {
   background-color: rgb(120, 167, 255);
@@ -143,7 +152,7 @@ nav {
   cursor: pointer;
 }
 .overlay {
-  padding: 50rem;
+  padding: 92rem;
   background-color: rgb(0, 0, 0);
   position: fixed;
   opacity: 0.7;
